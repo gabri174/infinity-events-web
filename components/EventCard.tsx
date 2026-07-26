@@ -17,45 +17,52 @@ export default function EventCard({ event, index = 0 }: EventCardProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-brand-purple/50 transition-all duration-300 group"
+      className="bg-brand-black border border-brand-gold/30 overflow-hidden hover:border-brand-gold transition-all duration-300 group"
     >
-      <div className="relative h-48 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+      <div className="relative h-64 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10" />
         <Image
           src={event.image}
           alt={event.title}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
         />
-        <div className="absolute bottom-4 left-4 z-20">
-          <h3 className="text-lg font-bold text-white">{event.title}</h3>
-          <p className="text-sm text-gray-300">{event.location}</p>
+        <div className="absolute top-4 left-4 z-20">
+          {event.tourName && (
+            <span className="font-display text-xs md:text-sm text-brand-gold tracking-widest border border-brand-gold/50 px-2 py-1">
+              {event.tourName}
+            </span>
+          )}
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 z-20 p-6">
+          <h3 className="font-display text-2xl md:text-3xl text-brand-cream leading-tight mb-2">
+            {event.title}
+          </h3>
+          <p className="text-brand-cream/70 text-sm font-sans">{event.location}</p>
         </div>
       </div>
       
-      <div className="p-4">
+      <div className="p-6">
         <div className="mb-4">
-          <p className="text-xs text-gray-400 mb-2">
+          <p className="text-xs text-brand-cream/60 mb-2 font-sans tracking-wide">
             {new Date(event.date).toLocaleDateString('es-ES', { 
-              weekday: 'long', 
+              weekday: 'short', 
               year: 'numeric', 
-              month: 'long', 
+              month: 'short', 
               day: 'numeric' 
-            })}
+            }).toUpperCase()}
           </p>
           <CountdownTimer date={event.date} />
         </div>
         
-        <div className="flex gap-2">
-          <Link
-            href={event.ticketsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 bg-brand-purple hover:bg-brand-purple/80 text-white text-center py-2 px-4 rounded font-medium transition-colors"
-          >
-            Comprar entradas
-          </Link>
-        </div>
+        <Link
+          href={event.ticketsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-brand-gold hover:bg-brand-gold/90 text-brand-black font-display text-center py-3 px-4 transition-colors tracking-wide"
+        >
+          MÁS INFO
+        </Link>
       </div>
     </motion.div>
   );

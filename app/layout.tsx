@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Anton, Inter } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const anton = Anton({
+  variable: "--font-anton",
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Infinity Sound - Producción de Eventos & Conciertos",
-  description: "Infinity Sound es una productora líder de eventos y conciertos. Creamos experiencias únicas e inolvidables.",
+  title: "Infinity Sound - Eventos Cristianos & Conciertos",
+  description: "Infinity Sound produce eventos de fe, música y activación profética. Noches de adoración y giras por España.",
 };
 
 export default function RootLayout({
@@ -21,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${spaceGrotesk.variable} h-full antialiased`}
+      className={`${anton.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">{children}</body>
     </html>

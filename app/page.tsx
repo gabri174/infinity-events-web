@@ -2,7 +2,7 @@
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Hero3D from '@/components/Hero3D';
+import HeroEvent from '@/components/Hero3D';
 import EventCard from '@/components/EventCard';
 import { getFeaturedEvents } from '@/lib/events';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       
       <main className="flex-1">
-        <Hero3D />
+        <HeroEvent />
         
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
@@ -26,11 +26,11 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-brand-purple">Próximos</span> <span className="text-brand-cyan">Eventos</span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl mb-4">
+              <span className="text-brand-gold">Próximas</span> <span className="text-brand-cream">Giras</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              No te pierdas nuestros próximos eventos. Experiencias únicas que te transportarán a otro universo.
+            <p className="text-brand-cream/70 max-w-2xl mx-auto font-sans">
+              Eventos de fe, música y activación profética. Únete a nosotros en estas ciudades.
             </p>
           </motion.div>
 
@@ -49,9 +49,9 @@ export default function Home() {
           >
             <Link
               href="/eventos"
-              className="inline-block bg-brand-purple hover:bg-brand-purple/80 text-white font-medium py-3 px-8 rounded-lg transition-colors"
+              className="inline-block bg-brand-gold hover:bg-brand-gold/80 text-brand-black font-display font-medium py-3 px-8 rounded transition-colors"
             >
-              Ver todos los eventos
+              VER TODAS LAS GIRAS
             </Link>
           </motion.div>
         </section>

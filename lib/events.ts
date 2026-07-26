@@ -7,68 +7,82 @@ export interface Event {
   description: string;
   image: string;
   ticketsUrl: string;
+  speaker?: string;
+  tourName?: string;
 }
 
 export const events: Event[] = [
   {
     id: "1",
-    title: "Neon Nights Festival 2026",
-    date: "2026-08-15T20:00:00",
-    endDate: "2026-08-16T06:00:00",
-    location: "Madrid Arena, Madrid",
-    description: "Una noche mágica llena de luz, sonido y las mejores actuaciones del momento. Preparate para vivir una experiencia única con artistas internacionales y una producción de primer nivel.",
-    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=600&fit=crop",
-    ticketsUrl: "https://example.com/tickets/neon-nights"
+    title: "Noches de Activación Profética",
+    date: "2026-09-30T20:00:00",
+    endDate: "2026-10-03T23:00:00",
+    location: "Tarragona, España",
+    description: "Cuatro noches de adoración profunda, enseñanza y activación espiritual. Únete a nosotros para un tiempo transformador en la presencia de Dios.",
+    image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&h=600&fit=crop",
+    ticketsUrl: "https://wa.me/34664087827",
+    speaker: "Ponente Invitado",
+    tourName: "EUROTOUR 2026"
   },
   {
     id: "2",
-    title: "Electronic Dreams",
-    date: "2026-09-20T22:00:00",
-    endDate: "2026-09-21T07:00:00",
-    location: "Fabrik, Madrid",
-    description: "El evento de música electrónica más esperado del año. DJ's de renombre internacional, visuales impactantes y un sonido que te transportará a otro universo.",
-    image: "https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=800&h=600&fit=crop",
-    ticketsUrl: "https://example.com/tickets/electronic-dreams"
+    title: "España Adora 2026",
+    date: "2026-11-15T19:00:00",
+    endDate: "2026-11-18T22:00:00",
+    location: "Tenerife, España",
+    description: "Un evento nacional de adoración y unidad. Ven a experimentar el poder de la adoración colectiva y el mover del Espíritu Santo.",
+    image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&h=600&fit=crop",
+    ticketsUrl: "https://wa.me/34664087827",
+    speaker: "Varios Ponentes",
+    tourName: "EUROTOUR 2026"
   },
   {
     id: "3",
-    title: "Infinity Sessions Vol. 5",
-    date: "2026-10-10T21:00:00",
-    endDate: "2026-10-11T04:00:00",
-    location: "Sala Riviera, Madrid",
-    description: "La quinta edición de nuestras sesiones exclusivas. Una experiencia íntima con los mejores talentos emergentes de la escena musical actual.",
-    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&h=600&fit=crop",
-    ticketsUrl: "https://example.com/tickets/sessions-vol5"
+    title: "Noches de Activación Profética",
+    date: "2026-12-01T20:00:00",
+    endDate: "2026-12-04T23:00:00",
+    location: "Barcelona, España",
+    description: "Continuación de nuestra gira de activación profética. Tiempo de enseñanza, adoración y ministerio personal.",
+    image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&h=600&fit=crop",
+    ticketsUrl: "https://wa.me/34664087827",
+    speaker: "Ponente Invitado",
+    tourName: "EUROTOUR 2026"
   },
   {
     id: "4",
-    title: "Cyberpunk Experience",
-    date: "2026-11-05T20:00:00",
-    endDate: "2026-11-06T05:00:00",
-    location: "IFEMA, Madrid",
-    description: "Sumérgete en un mundo futurista donde la música y la tecnología se fusionan. Actuaciones en vivo, instalaciones interactivas y una atmósfera cyberpunk única.",
-    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&h=600&fit=crop",
-    ticketsUrl: "https://example.com/tickets/cyberpunk"
+    title: "Awakening Night",
+    date: "2027-01-20T20:00:00",
+    endDate: "2027-01-20T23:30:00",
+    location: "Madrid, España",
+    description: "Una noche especial de despertar espiritual. Adoración, palabra y un tiempo poderoso de ministerio.",
+    image: "https://images.unsplash.com/photo-1518176258769-f227c798150e?w=800&h=600&fit=crop",
+    ticketsUrl: "https://wa.me/34664087827",
+    speaker: "Equipo Infinity Sound",
+    tourName: "SPECIAL EVENT"
   },
   {
     id: "5",
-    title: "Winter Bass Festival",
-    date: "2026-12-15T21:00:00",
-    endDate: "2026-12-16T06:00:00",
-    location: "WiZink Center, Madrid",
-    description: "El festival que cierra el año con la mejor selección de bass music. Dubstep, trap, drum & bass y mucho más en un espectáculo visual sin precedentes.",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop",
-    ticketsUrl: "https://example.com/tickets/winter-bass"
+    title: "España Adora 2027",
+    date: "2027-03-10T19:00:00",
+    endDate: "2027-03-13T22:00:00",
+    location: "Valencia, España",
+    description: "El evento de adoración más grande de España. Tres días de adoración ininterrumpida, enseñanza y comunidad.",
+    image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&h=600&fit=crop",
+    ticketsUrl: "https://wa.me/34664087827",
+    speaker: "Varios Ponentes",
+    tourName: "NATIONAL TOUR"
   },
   {
     id: "6",
-    title: "New Year's Eve Infinity",
-    date: "2026-12-31T22:00:00",
-    endDate: "2027-01-01T07:00:00",
-    location: "Puerta de Alcalá, Madrid",
-    description: "Despide el año con la fiesta más épica de Madrid. Concierto al aire libre, fuegos artificiales sincronizados con la música y la mejor vibra para recibir el 2027.",
-    image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop",
-    ticketsUrl: "https://example.com/tickets/new-year"
+    title: "Summer Worship Conference",
+    date: "2027-06-15T18:00:00",
+    endDate: "2027-06-18T22:00:00",
+    location: "Sevilla, España",
+    description: "Conferencia de verano enfocada en el desarrollo de líderes de adoración y músicos. Workshops, adoración y networking.",
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
+    ticketsUrl: "https://wa.me/34664087827",
+    speaker: "Infinity Sound Team",
+    tourName: "LEADERSHIP CONFERENCE"
   }
 ];
 

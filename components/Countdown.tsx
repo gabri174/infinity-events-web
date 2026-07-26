@@ -21,25 +21,25 @@ export default function CountdownTimer({ date, className = '' }: CountdownProps)
 
   const renderer = ({ days, hours, minutes, seconds }: { days: number; hours: number; minutes: number; seconds: number }) => {
     return (
-      <div className={`flex gap-4 ${className}`}>
+      <div className={`flex gap-6 md:gap-8 ${className}`}>
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-brand-purple">{days}</div>
-          <div className="text-xs text-gray-400">Días</div>
+          <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-gold leading-none">{String(days).padStart(2, '0')}</div>
+          <div className="text-xs md:text-sm text-brand-cream/60 mt-1 tracking-widest">DÍAS</div>
         </div>
-        <div className="text-2xl md:text-3xl font-bold text-gray-600">:</div>
+        <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-cream/30 leading-none">:</div>
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-brand-cyan">{hours}</div>
-          <div className="text-xs text-gray-400">Horas</div>
+          <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-gold leading-none">{String(hours).padStart(2, '0')}</div>
+          <div className="text-xs md:text-sm text-brand-cream/60 mt-1 tracking-widest">HORAS</div>
         </div>
-        <div className="text-2xl md:text-3xl font-bold text-gray-600">:</div>
+        <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-cream/30 leading-none">:</div>
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-brand-purple">{minutes}</div>
-          <div className="text-xs text-gray-400">Min</div>
+          <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-gold leading-none">{String(minutes).padStart(2, '0')}</div>
+          <div className="text-xs md:text-sm text-brand-cream/60 mt-1 tracking-widest">MIN</div>
         </div>
-        <div className="text-2xl md:text-3xl font-bold text-gray-600">:</div>
+        <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-cream/30 leading-none">:</div>
         <div className="text-center">
-          <div className="text-2xl md:text-3xl font-bold text-brand-cyan">{seconds}</div>
-          <div className="text-xs text-gray-400">Seg</div>
+          <div className="font-display text-4xl md:text-6xl lg:text-7xl text-brand-gold leading-none">{String(seconds).padStart(2, '0')}</div>
+          <div className="text-xs md:text-sm text-brand-cream/60 mt-1 tracking-widest">SEG</div>
         </div>
       </div>
     );
