@@ -1,152 +1,179 @@
-'use client';
-
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import ContactForm from '@/components/ContactForm';
-import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactoPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      
-      <main className="flex-1 pt-16">
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-brand-purple">Contáctanos</span>
-            </h1>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              ¿Tienes alguna pregunta o quieres trabajar con nosotros? Estamos aquí para escuchar.
-            </p>
-          </motion.div>
+    <main className="page-shell">
+      <section className="page-hero grain">
+        <div className="page-hero__inner">
+          <div className="page-kicker">Infinity Sound — Contacto</div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <ContactForm />
-            </motion.div>
+          <h1 className="page-title">
+            HABLEMOS DEL <span className="stroke">PRÓXIMO PASO</span>
+          </h1>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-8"
-            >
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h2 className="text-2xl font-bold mb-6 text-brand-purple">Información de Contacto</h2>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-brand-purple/20 p-3 rounded-lg">
-                      <MapPin className="text-brand-purple" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Ubicación</h3>
-                      <p className="text-gray-400">Madrid, España</p>
-                    </div>
-                  </div>
+          <p className="page-subtitle">
+            Para contratación, colaboraciones, prensa o cualquier propuesta
+            relacionada con Infinity Sound, utiliza este espacio como punto de
+            contacto. La página mantiene la misma línea visual del resto del
+            sitio para que toda la experiencia sea consistente.
+          </p>
 
-                  <div className="flex items-start gap-4">
-                    <div className="bg-brand-cyan/20 p-3 rounded-lg">
-                      <Mail className="text-brand-cyan" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-gray-400">contact@infinitysound.com</p>
-                    </div>
-                  </div>
+          <div className="page-cta">
+            <Link href="/eventos" className="btn-secondary">
+              Ver giras
+            </Link>
+          </div>
+        </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="bg-brand-purple/20 p-3 rounded-lg">
-                      <Phone className="text-brand-purple" size={20} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Teléfono</h3>
-                      <p className="text-gray-400">+34 900 123 456</p>
-                    </div>
-                  </div>
+        <div className="ghost ghost--symbol">CONTACT</div>
+      </section>
+
+      <section className="page-section">
+        <div className="page-section__inner">
+          <div className="page-split">
+            <article className="page-panel">
+              <span className="page-section__eyebrow">Contacto directo</span>
+              <h2 className="page-panel__title">Información</h2>
+
+              <div className="page-stack" style={{ marginTop: '1rem' }}>
+                <div>
+                  <div className="page-note">Email</div>
+                  <p className="page-panel__text" style={{ marginTop: '0.35rem' }}>
+                    booking@infinitysound.com
+                  </p>
+                </div>
+
+                <div className="page-divider"></div>
+
+                <div>
+                  <div className="page-note">Management</div>
+                  <p className="page-panel__text" style={{ marginTop: '0.35rem' }}>
+                    Disponible para eventos, salas, festivales y colaboraciones.
+                  </p>
+                </div>
+
+                <div className="page-divider"></div>
+
+                <div>
+                  <div className="page-note">Respuesta</div>
+                  <p className="page-panel__text" style={{ marginTop: '0.35rem' }}>
+                    Respuesta habitual en 24–48 horas para propuestas profesionales.
+                  </p>
                 </div>
               </div>
+            </article>
 
-              <div className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                <h2 className="text-2xl font-bold p-6 text-brand-cyan">Encuéntranos</h2>
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.123456789!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sPuerta%20del%20Sol!5e0!3m2!1ses!2ses!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            <article className="page-panel">
+              <span className="page-section__eyebrow">Formulario</span>
+              <h2 className="page-panel__title">Escríbenos</h2>
+
+              <form className="page-form" style={{ marginTop: '1rem' }}>
+                <div className="page-form__row">
+                  <div className="page-field">
+                    <label htmlFor="name">Nombre</label>
+                    <input id="name" name="name" type="text" placeholder="Tu nombre" />
+                  </div>
+
+                  <div className="page-field">
+                    <label htmlFor="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="tu@email.com" />
+                  </div>
+                </div>
+
+                <div className="page-form__row">
+                  <div className="page-field">
+                    <label htmlFor="subject">Asunto</label>
+                    <input id="subject" name="subject" type="text" placeholder="Motivo del mensaje" />
+                  </div>
+
+                  <div className="page-field">
+                    <label htmlFor="type">Tipo de propuesta</label>
+                    <select id="type" name="type" defaultValue="">
+                      <option value="" disabled>
+                        Selecciona una opción
+                      </option>
+                      <option value="booking">Booking</option>
+                      <option value="festival">Festival</option>
+                      <option value="press">Prensa</option>
+                      <option value="collab">Colaboración</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="page-field">
+                  <label htmlFor="message">Mensaje</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Cuéntanos tu propuesta, fecha, ciudad o colaboración."
                   />
                 </div>
-              </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-lg p-6">
-                <h2 className="text-xl font-bold mb-4">Síguenos en redes</h2>
-                <div className="flex gap-4">
-                  <a
-                    href="https://instagram.com/infinitysound.concerts"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-brand-purple/20 hover:bg-brand-purple/40 text-brand-purple p-3 rounded-lg transition-colors"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://tiktok.com/@infinitysound"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-brand-cyan/20 hover:bg-brand-cyan/40 text-brand-cyan p-3 rounded-lg transition-colors"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-                    </svg>
-                  </a>
+                <div className="page-cta">
+                  <button type="submit" className="btn-primary">
+                    Enviar mensaje
+                  </button>
                 </div>
-              </div>
-            </motion.div>
+              </form>
+            </article>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      <Footer />
-    </div>
+      <section className="page-section page-section--accent">
+        <div className="page-section__inner">
+          <div className="page-section__head">
+            <span className="page-section__eyebrow">Áreas</span>
+            <h2 className="page-section__title">
+              TIPOS DE <span className="stroke">COLABORACIÓN</span>
+            </h2>
+            <p className="page-section__text">
+              Esta estructura te permite presentar el contacto como una parte
+              premium del sitio, no como una página secundaria. Así mantienes el
+              mismo tono visual y de marca en todo el recorrido.
+            </p>
+          </div>
+
+          <div className="page-grid page-grid--3">
+            <article className="page-card">
+              <span className="page-card__eyebrow">01</span>
+              <h3 className="page-card__title">Contratación</h3>
+              <p className="page-card__text">
+                Fechas en salas, eventos privados, showcases o ciclos especiales.
+              </p>
+            </article>
+
+            <article className="page-card">
+              <span className="page-card__eyebrow">02</span>
+              <h3 className="page-card__title">Festivales</h3>
+              <p className="page-card__text">
+                Propuestas para programación cultural, festivales y formatos en directo.
+              </p>
+            </article>
+
+            <article className="page-card">
+              <span className="page-card__eyebrow">03</span>
+              <h3 className="page-card__title">Colaboraciones</h3>
+              <p className="page-card__text">
+                Marcas, campañas, sesiones creativas y acciones con identidad visual fuerte.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="page-section__inner">
+          <div className="page-cta">
+            <Link href="/" className="btn-secondary">
+              Volver al inicio
+            </Link>
+            <Link href="/biografia" className="btn-secondary">
+              Ver biografía
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
