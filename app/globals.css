@@ -2192,3 +2192,27 @@ body.cur-click #cur{width:54px;height:54px;background:rgba(215,170,85,.12)}
 @keyframes owHeroZoom{to{transform:scale(1.1)}}@keyframes owTitle{to{clip-path:inset(0)}}@keyframes owFadeUp{to{opacity:1;transform:none}}@keyframes owMarquee{to{transform:translateX(-50%)}}@keyframes owGallery{to{transform:translateX(-50%)}}
 @media(max-width:900px){.ow-hero{min-height:720px}.ow-hero__content{padding-top:100px}.ow-hero h1{font-size:18vw}.ow-hero__bottom{align-items:flex-start}.ow-circle{width:100px;height:100px}.ow-manifesto__grid,.ow-cities__grid{grid-template-columns:1fr}.ow-side{margin-bottom:25px}.ow-manifesto{padding:100px 0 120px}.ow-manifesto h2,.ow-section-intro h2,.ow-cities h2{font-size:17vw}.ow-section-intro{align-items:flex-start;flex-direction:column;padding:85px 0 45px}.ow-event{grid-template-columns:35px 1fr 25px;padding:28px 15px}.ow-event__date,.ow-event__place{grid-column:2}.ow-event h3{grid-column:2;grid-row:3}.ow-event>b{grid-column:3;grid-row:1/4}.ow-feature{grid-template-columns:1fr}.ow-feature__visual{min-height:500px}.ow-feature__copy{padding:80px 7% 100px}.ow-archive__grid{grid-template-columns:1fr}.ow-archive-card,.ow-archive-card--1{min-height:460px}.ow-gallery-track img{width:70vw;height:92vw}.ow-cities{padding:100px 0}.ow-map{margin-top:30px;min-height:460px}.ow-final{min-height:620px}.ow-final h2{font-size:18vw}.ow-final__word{font-size:48vw}}
 @media(prefers-reduced-motion:reduce){.ow-hero__image,.ow-hero h1 span,.ow-hero__bottom,.ow-marquee div,.ow-gallery-track{animation:none!important}.ow-hero h1 span{clip-path:none}}
+
+
+/* =========================
+   INFINITY / EDITORIAL MOTION 2.0
+   ========================= */
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:2px;background:var(--brand-gold);transform-origin:left center;transform:scaleX(var(--scroll-progress,0));z-index:10001;box-shadow:0 0 18px rgba(212,162,76,.35)}
+.scroll-progress.is-active{transform:scaleX(1);transition:transform .42s cubic-bezier(.77,0,.18,1)}
+.ow-hero__image{transform:translate3d(0,var(--parallax-y,0px),0) scale(1.06);will-change:transform}
+.ow-feature__visual img,.ow-archive-card img{transform:translate3d(0,var(--parallax-y,0px),0) scale(1.045);will-change:transform}
+.ow-feature__visual,.ow-archive-card{overflow:hidden}
+.ow-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 49.9%,rgba(245,241,232,.08) 50%,transparent 50.1%);mix-blend-mode:screen;opacity:.35}
+.ow-hero h1 span{display:block;animation:editorialTitle 1s cubic-bezier(.16,1,.3,1) both}
+.ow-hero h1 span:nth-child(2){animation-delay:.08s}.ow-hero h1 span:nth-child(3){animation-delay:.16s}
+.ow-hero__bottom{animation:editorialUp 1s .3s cubic-bezier(.16,1,.3,1) both}
+.ow-marquee{position:relative}
+.ow-marquee::before,.ow-marquee::after{content:"";position:absolute;top:0;bottom:0;width:10vw;z-index:2;pointer-events:none}.ow-marquee::before{left:0;background:linear-gradient(90deg,var(--brand-gold),transparent)}.ow-marquee::after{right:0;background:linear-gradient(270deg,var(--brand-gold),transparent)}
+.ow-event h3{transition:transform .45s cubic-bezier(.16,1,.3,1),letter-spacing .45s}.ow-event:hover h3{transform:translateX(18px);letter-spacing:-.02em}.ow-event b{transition:transform .45s cubic-bezier(.16,1,.3,1),opacity .3s}.ow-event:hover b{transform:translate(7px,-7px) rotate(45deg);opacity:1}
+.ow-circle,.ow-button{transition:transform .45s cubic-bezier(.16,1,.3,1),background .3s,color .3s,border-color .3s}.ow-circle:hover,.ow-button:hover{transform:translateY(-6px) rotate(-2deg)}
+.ow-section-intro h2,.ow-manifesto h2,.ow-feature__copy h2,.ow-cities h2,.ow-final h2{letter-spacing:-.055em}
+.ow-final{position:relative;overflow:hidden}.ow-final__word{transition:transform .2s linear;transform:translateX(calc(var(--scroll-progress,0) * -18%));white-space:nowrap}
+@keyframes editorialTitle{from{opacity:0;transform:translateY(80px);clip-path:inset(100% 0 0 0)}to{opacity:1;transform:none;clip-path:inset(0)}}
+@keyframes editorialUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}
+@media (max-width:800px){.scroll-progress{height:3px}.ow-hero h1 span{animation-duration:.75s}.ow-event:hover h3{transform:none}.ow-circle:hover,.ow-button:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-progress{transform:scaleX(var(--scroll-progress,0))}.ow-hero h1 span,.ow-hero__bottom{animation:none!important}.ow-hero__image,.ow-feature__visual img,.ow-archive-card img,.ow-final__word{transform:none!important}}
