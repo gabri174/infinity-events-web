@@ -16,7 +16,7 @@ export default function Home(){
  return <main className="redesign-home">
   <section className="ow-hero">
    <Navbar/>
-   <div className="ow-hero__image"/>
+   <div className="ow-hero__image" data-parallax="0.18"/>
    <div className="ow-hero__shade"/>
    <div className="ow-hero__content page-width">
     <p className="eyebrow ow-gold">VALENCIA · ESPAÑA · LIVE EXPERIENCES</p>
@@ -45,13 +45,13 @@ export default function Home(){
   </section>
 
   <section className="ow-feature" data-motion>
-   <div className="ow-feature__visual"><img src={gallery[2].src} alt={gallery[2].label}/><span>03 / LIVE EXPERIENCE</span></div>
+   <div className="ow-feature__visual"><img src={gallery[2].src} alt={gallery[2].label} data-parallax="0.12"/><span>03 / LIVE EXPERIENCE</span></div>
    <div className="ow-feature__copy"><p className="eyebrow">UNA NOCHE. UNA HISTORIA.</p><h2>LA FE<br/>TAMBIÉN<br/><em>SE VIVE.</em></h2><p>Trabajamos con iglesias, promotores, salas y festivales para llevar experiencias de música cristiana a nuevas ciudades.</p><Link href="/contacto" className="ow-button">HABLAR DE TU PROYECTO <b>↗</b></Link></div>
   </section>
 
   <section className="ow-archive" data-motion>
    <div className="page-width ow-section-intro ow-section-intro--cream"><div><p className="eyebrow">04 / ARCHIVO</p><h2>LO QUE<br/><em>YA PASÓ.</em></h2></div><Link href="/eventos-pasados" className="ow-underlink">EXPLORAR ARCHIVO ↗</Link></div>
-   <div className="page-width ow-archive__grid">{gallery.slice(0,3).map((g,i)=><Link href="/eventos-pasados" className={`ow-archive-card ow-archive-card--${i+1}`} key={g.src}><img src={g.src} alt={g.label}/><div><span>0{i+1}</span><strong>{g.label}</strong><b>↗</b></div></Link>)}</div>
+   <div className="page-width ow-archive__grid">{gallery.slice(0,3).map((g,i)=><Link href="/eventos-pasados" className={`ow-archive-card ow-archive-card--${i+1}`} key={g.src}><img src={g.src} alt={g.label} data-parallax="0.08"/><div><span>0{i+1}</span><strong>{g.label}</strong><b>↗</b></div></Link>)}</div>
   </section>
 
   <section className="ow-gallery ow-black" data-motion>
