@@ -2216,3 +2216,50 @@ body.cur-click #cur{width:54px;height:54px;background:rgba(215,170,85,.12)}
 @keyframes editorialUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:none}}
 @media (max-width:800px){.scroll-progress{height:3px}.ow-hero h1 span{animation-duration:.75s}.ow-event:hover h3{transform:none}.ow-circle:hover,.ow-button:hover{transform:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-progress{transform:scaleX(var(--scroll-progress,0))}.ow-hero h1 span,.ow-hero__bottom{animation:none!important}.ow-hero__image,.ow-feature__visual img,.ow-archive-card img,.ow-final__word{transform:none!important}}
+
+
+/* OWNITT-INSPIRED MONOCHROME ART DIRECTION — INFINITY CONTENT PRESERVED */
+:root{--background:#f5f5f2;--foreground:#101010;--brand-gold:#f5f5f2;--brand-red:#101010;--brand-black:#080808;--brand-cream:#f5f5f2;--yellow:#f5f5f2;--pink:#101010;--green:#f5f5f2;--blue:#777;--violet:#444;--orange:#aaa;--ink:#080808;--canvas:#f5f5f2;--is-gold:#f5f5f2;--is-cream:#f5f5f2}
+body{background:#f5f5f2;color:#101010}
+::selection{background:#101010;color:#fff}
+:focus-visible{outline-color:#101010}
+/* Black-and-white imagery; keep original photographs and subjects */
+.redesign-home img,.chapter-visual img,.photo-frame img,.collage-img,.gal-item img,.ow-feature__visual img,.ow-archive-card img,.ow-gallery-track img{filter:grayscale(1) contrast(1.04)}
+.ow-hero__image{background-image:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=2400&q=92')!important}
+.ow-hero__shade{background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 52%)!important}
+.ow-manifesto,.ow-cities,.ow-archive{background:#f5f5f2!important;color:#101010}
+.ow-manifesto h2 em,.ow-section-intro h2 em,.ow-cities h2 em,.ow-feature h2 em,.ow-final h2 em{color:#858585!important}
+.ow-marquee{background:#f5f5f2!important;color:#101010!important;border-top:1px solid #101010;border-bottom:1px solid #101010}
+.ow-marquee::before,.ow-marquee::after{display:none}
+.ow-black,.ow-gallery{background:#080808!important;color:#f5f5f2!important}
+.ow-feature{background:#e9e9e6!important;color:#101010!important}
+.ow-feature__copy>p:not(.eyebrow){color:#555!important}
+.ow-feature__visual span{background:#080808;color:#fff}
+.ow-button,.ow-underlink{border-color:rgba(16,16,16,.45)}
+.ow-black .ow-button,.ow-black .ow-underlink{border-color:rgba(255,255,255,.45)}
+.ow-button b,.ow-event>b,.ow-circle b,.ow-scroll i{color:currentColor!important}
+.ow-circle:hover{background:#101010!important;color:#fff!important;border-color:#101010!important}
+.ow-circle:hover b{color:#fff!important}
+.ow-final{background:#e5e5e1!important;color:#101010!important}
+.ow-circle--dark{border-color:#101010;color:#101010}
+.ow-event:before{background:linear-gradient(90deg,rgba(255,255,255,.09),transparent 60%)!important}
+.ow-event{border-color:rgba(255,255,255,.2)}
+.ow-event__n,.ow-event__date,.ow-event__place{color:rgba(255,255,255,.62)}
+.eyebrow,.ow-gold{color:inherit!important}
+.page-transition{background:#f5f5f2!important;color:#101010!important}
+.page-transition__line{background:#101010!important}
+#cur::before{border-color:currentColor}#cur::after{background:currentColor}
+/* Navigation, footer and secondary pages share the same monochrome system */
+.nav{background:rgba(8,8,8,.88)!important;color:#fff!important;border-color:rgba(255,255,255,.15)!important;backdrop-filter:blur(18px)}
+.nav a,.nav button{color:#fff}
+.nav__cta{border-color:rgba(255,255,255,.55)!important}
+.nav__mobile{background:#080808!important;color:#fff!important}
+footer,.footer,.site-footer{background:#080808!important;color:#f5f5f2!important}
+button,.button,.btn{transition:color .4s cubic-bezier(.16,1,.3,1),background .4s cubic-bezier(.16,1,.3,1),border-color .4s,transform .4s cubic-bezier(.16,1,.3,1)}
+a:not(.ow-event):not(.ow-archive-card){text-underline-offset:5px}
+/* Shared page transitions: monochrome curtain and editorial easing */
+.page-transition{clip-path:inset(0 0 0 0);transition:clip-path .72s cubic-bezier(.77,0,.18,1),visibility .72s}
+.page-transition.is-leaving{clip-path:inset(0 0 0 0);}
+.page-transition:not(.is-intro):not(.is-leaving){clip-path:inset(0 0 100% 0);visibility:hidden}
+[data-motion]{transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
